@@ -39,4 +39,10 @@ class Loader {
 			add_filter('emoji_svg_url', '__return_false');
 		});
 	}
+
+	public static function disableGenerator() {
+		add_action('init', function () {
+			add_filter('the_generator', '__return_false');
+		});
+	}
 }
